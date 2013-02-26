@@ -24,7 +24,7 @@ def generate_rtl_template_name(template_name):
     return "{0}_rtl{1}".format(file_name, extension)
 
 
-class RightToLeftLoader(BaseLoader):
+class Loader(BaseLoader):
     is_usable = True
 
     def __init__(self, loaders):

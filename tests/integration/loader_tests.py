@@ -23,7 +23,7 @@ class AppDirectoriesLoader(LoaderTest):
     def setUp(self):
         settings.INSTALLED_APPS = ['tests.test_app']
         settings.TEMPLATE_LOADERS = (
-            ('rtl.loaders.RightToLeftLoader', (
+            ('rtl.loaders.Loader', (
                 'django.template.loaders.app_directories.Loader',
             )),
         )
@@ -42,7 +42,7 @@ class CachedLoader(LoaderTest):
 
     def setUp(self):
         settings.TEMPLATE_LOADERS = (
-            ('rtl.loaders.RightToLeftLoader', (
+            ('rtl.loaders.Loader', (
                 ('django.template.loaders.cached.Loader', (
                     'django.template.loaders.filesystem.Loader',
                 )),
@@ -62,7 +62,7 @@ class EggLoader(LoaderTest):
 
     def setUp(self):
         settings.TEMPLATE_LOADERS = (
-            ('rtl.loaders.RightToLeftLoader', (
+            ('rtl.loaders.Loader', (
                 'django.template.loaders.eggs.Loader',
             )),
         )
@@ -86,7 +86,7 @@ class FileSystemLoader(LoaderTest):
 
     def setUp(self):
         settings.TEMPLATE_LOADERS = (
-            ('rtl.loaders.RightToLeftLoader', (
+            ('rtl.loaders.Loader', (
                 'django.template.loaders.filesystem.Loader',
             )),
         )
