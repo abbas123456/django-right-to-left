@@ -1,0 +1,7 @@
+Django==1.4.3
+argparse==1.2.1
+blessings==1.5
+django-nose==1.1
+nose==1.2.1
+pinocchio==0.3.1
+wsgiref==0.1.2
