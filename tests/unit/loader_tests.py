@@ -2,7 +2,7 @@ from django.test import TestCase
 from rtl.loaders import generate_rtl_template_name
 
 
-class Loader(TestCase):
+class RighToLeftLoader(TestCase):
 
     def test_generates_correct_rtl_template_name_for_template_with_normal_file_extension(self):
         self.assertEqual('templates/test_rtl.html',

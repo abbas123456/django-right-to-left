@@ -28,7 +28,7 @@ class AppDirectoriesLoader(LoaderTest):
             )),
         )
 
-    def test_wraps_app_directories_loader_correctly(self):
+    def test_is_wrapped_correctly_by_right_to_left_loader(self):
 
         translation.activate("en")
         self.assertNotContains(render_to_response('test.html', {}),
@@ -49,7 +49,7 @@ class CachedLoader(LoaderTest):
             )),
         )
 
-    def test_wraps_cached_loader_correctly(self):
+    def test_is_wrapped_correctly_by_right_to_left_loader(self):
         translation.activate("en")
         self.assertNotContains(render_to_response('test.html', {}),
                                'file system right to left')
@@ -73,7 +73,7 @@ class EggLoader(LoaderTest):
         })
         settings.INSTALLED_APPS = ['egg_app']
 
-    def test_wraps_egg_loader_correctly(self):
+    def test_is_wrapped_correctly_by_right_to_left_loader(self):
         translation.activate("en")
         self.assertNotContains(render_to_response('test.html', {}),
                                'egg loader right to left')
@@ -91,7 +91,7 @@ class FileSystemLoader(LoaderTest):
             )),
         )
 
-    def test_wraps_filesystem_loader_correctly(self):
+    def test_is_wrapped_correctly_by_right_to_left_loader(self):
         translation.activate("en")
         self.assertNotContains(render_to_response('test.html', {}),
                                'file system right to left')
