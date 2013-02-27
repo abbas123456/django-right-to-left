@@ -7,7 +7,7 @@ PROJECT_DIR = os.path.dirname(__file__)
 setup(
     name = 'django-right-to-left',
     packages = ['rtl'],
-    version = '0.1',
+    version = '0.1.1',
     license = 'BSD',
     keywords = 'Django, translation, internationalization, righ to left, bidi',
     description = 'A Django template loader that looks for an alternative right to left version of a template file if the activated language is a right to left language such as Arabic or Hebrew.',
