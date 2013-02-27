@@ -1,4 +1,3 @@
-
 =====================
 django-right-to-left
 =====================
@@ -15,17 +14,14 @@ The most common use case for this would be a Django website that supports both a
 -------
 Example
 -------
-Suppose you had the following Django template:
+Suppose you had the following Django template::
 
-homepage.html
+    # homepage.html
     {% extends "layout.html" %}
     
     {% block content %}
-    
-    <div id="main_content">...</div>
-
-    <div id="side_promo">...</div>
-    
+        <div id="main_content">...</div>
+        <div id="side_promo">...</div>   
     {% endblock %}
 
 To swap the content around when the activated language is Arabic, an IF statement would have to be wrapped around the div tags. This may be a feasible solution for small templates but for most templates this will make the template very hard to read and messy. 
@@ -38,11 +34,11 @@ Now when a template is rendered, regardless of whether it is rendered by a Djang
 Installation
 ------------
 
-You can install django-right-to-left using pip:
+You can install django-right-to-left using pip::
 
     $ pip install django-right-to-left
 
-or easy_install
+or easy_install::
 
     $ easy_install django-right-to-left
 
@@ -55,26 +51,21 @@ The django-right-to-left template loader is a class-based loader that you config
 
 Simply wrap the template loaders defined in your settings file with the django-right-to-left-loader.
 
-For example, if you are currently using the filesystem loader and app_directories loader, change the **TEMPLATE_LOADERS** settings from:
+For example, if you are currently using the filesystem loader and app_directories loader, 
+change the ``TEMPLATE_LOADERS`` settings from::
 
     TEMPLATE_LOADERS = (
         'django.template.loaders.filesystem.Loader',
-
         'django.template.loaders.app_directories.Loader',
-
     )
 
-to this:
+to this::
 
     TEMPLATE_LOADERS = (
         ('rtl.loaders.Loader', (
-
             'django.template.loaders.filesystem.Loader',
-
             'django.template.loaders.app_directories.Loader',
-
         )),
-
     )
 
 That's all there is to it. All you have to do now is create your alternative templates, ensuring that the string "_rtl" is appended to the filename. So the alternative template for "homepage.html" will be "homepage_rtl.html".
@@ -83,14 +74,12 @@ That's all there is to it. All you have to do now is create your alternative tem
 Running the tests
 ------------------
 
-django-right-to-left has a small but extensive test suite. You can run the tests by running the following commands, assuming you have `virtualenvwrapper <http://www.doughellmann.com/projects/virtualenvwrapper/>`_ installed. 
+django-right-to-left has a small but extensive test suite. You can run the tests by running the 
+following commands, assuming you 
+have `virtualenvwrapper <http://www.doughellmann.com/projects/virtualenvwrapper/>`_ installed::
 
     $ git clone git@github.com:abbas123456/django-right-to-left.git
-
     $ cd django-right-to-left
-
     $ mkvirtualenv django-right-to-left
-
     $ pip install -r requirements.txt
-
     $ ./runtests.py
