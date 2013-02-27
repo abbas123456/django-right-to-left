@@ -10,7 +10,7 @@ setup(
     version = '0.1',
     license = 'BSD',
     keywords = 'Django, translation, internationalization, righ to left, bidi',
-    description = 'A django template loader that looks for a right to left version of a template if the activated language is a right to left language (e.g Arabic, Hebrew)',
+    description = 'A Django template loader that looks for an alternative right to left version of a template file if the activated language is a right to left language such as Arabic or Hebrew.',
     long_description=open(os.path.join(PROJECT_DIR, 'README.rst')).read(),
     author='Mohammad Abbas',
     author_email='mohammad.abbas86@gmail.com',
