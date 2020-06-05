@@ -1,4 +1,4 @@
-Django==1.4.3
+Django==1.11.29
 argparse==1.2.1
 blessings==1.5
 django-nose==1.1
